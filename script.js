@@ -20,7 +20,9 @@ const sendData = (url, data) => {
 };
 
 sendData('https://jsonplaceholder.typicode.com/posts', JSON.stringify(user))
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
+    .then(response => {
+        console.log("Данные отправлены");
+    })
+    .catch(e => {
+        console.log('ошибка:', e);
     });
